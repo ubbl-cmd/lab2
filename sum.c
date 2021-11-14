@@ -4,8 +4,9 @@
 
 int sum(int* array, int len) {
     int max = abs_max(array, len);
-    int result = 0;
-    for (int i = len - 1; abs(array[i + 1]) != max; i--) {
+    int result = max;
+    max = abs(max);
+    for (int i = len - 1; abs(array[i]) != max; i--) {
         result += array[i];
     }
     return result;
